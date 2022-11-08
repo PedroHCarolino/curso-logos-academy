@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cliente.css" type="text/css" />
+    <title>Cadastro</title>
+</head>
+    <div class="title"><h1>BEM-VINDO AO NICEJOB!</h1></div>
+<body>
+    
+    <div class="main">
+        <div class="boxCliente">
+            <h1 class="mainText">Cadastre-se como cliente:</h1>
+            <form class="form-cliente">
+                <label>Nome:</label><br>
+                <input class="inputForm1" type="text" placeholder="Nome completo"/><br>
+                <label>Email:</label><br>
+                <input class="inputForm2" type="email" placeholder="Email" /><br>
+                <label class="senhaLabel">Senha:</label>
+                <label class="cepLabel" >CEP:</label>
+                <label class="telLabel">Telefone:</label><br>
+                <input class="inputForm3" type="password" placeholder="Senha" />
+                <input class="inputForm4" type="tel" placeholder="(00) 00000-0000"/>
+                <input class="inputForm5" type="number" placeholder="00000-000" /><br>
+                <input class="inputForm6" type="password" placeholder="Repita a senha" />
+            </form>
+            <input class="inputForm7" type="button" value="Cadastrar" href="searchPrestador.ejs"/>
+        </div>
+        <div class="boxPrestador">
+            <label class="labelPres">Seja um prestador</label>
+            <a href="prestador.ejs" target="_blank"><input class="butPres" type="button" value="Aqui!"/></a>
+        </div>
+    </div>    
+</body>
+</html>

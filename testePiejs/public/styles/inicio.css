@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(186, 225, 248);
+    background-image: url(./assets/imgInicio.png);
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    height: 100vh;
+    color: black;
+}
+
+.main {
+    position: relative;
+    text-align: center;
+    width: 60vh;
+    height: 65vh;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.682);
+}
+
+.mainText {
+    color: rgb(90, 165, 209);
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.show-btn {
+    margin: 0;
+    background-color: rgb(40, 121, 168);
+    position: relative;
+    border-radius: 35px;
+    color: white;
+    padding: 5px 40px;
+    font-size: 30px;
+    top: 135px;
+    text-decoration: none;
+}
+.show-btn1 {
+    margin: 0;
+    color: white;
+    background-color: rgb(40, 121, 168);
+    border-radius: 35px;
+    font-size: 30px;
+    padding: 5px 40px;
+    position: relative;
+    top: 135px;
+    text-decoration: none;
+}
+
+.show-btn:hover, .show-btn1:hover{
+  background-color: rgb(11, 70, 101);
+  transition: 1.0s;
+}
+
+.show-btn:active, .show-btn1:active{
+  color: black;
+}
+
+.show-btn, .container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.container{
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 60vh;
+  height: 65vh;
+  width: 400px;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#show:checked ~ .container{
+  display: block;
+}
+
+.container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container .text{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  color:  rgb(90, 165, 209);
+}
+
+.container form{
+  margin-top: -20px;
+}
+
+.container form .data{
+  height: 45px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+form .data label{
+  font-size: 18px;
+}
+
+form .data input{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  padding-left: 10px;
+  font-size: 17px;
+  background-color: rgb(186, 225, 248) ;
+  
+}
+
+.ModalBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(40, 121, 168);
+  border-radius: 35px;
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  left: 200px;
+  padding: 0 45px;
+  font-size: 37px;
+}
+
+.ModalBtn:hover {
+  background-color:rgb(11, 70, 101);
+  transition: 1.0s;
+}
+
+.submit {
+  font-size: 10px;
+}
+
+form .data input:focus{
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+
+form .forgot-pass{
+  margin-top: -8px;
+}
+
+form .forgot-pass a{
+  color: rgba(102, 211, 209, 0.906);
+  text-decoration: none;
+}
+
+form .forgot-pass a:hover{
+  text-decoration: underline;
+}
+
+form .signup-link{
+  text-align: center;
+}
+
+form .signup-link a{
+  color: #3498db;
+  text-decoration: none;
+}
+
+form .signup-link a:hover{
+  text-decoration: underline;
+}
