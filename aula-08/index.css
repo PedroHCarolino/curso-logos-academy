@@ -1,0 +1,16 @@
+.container-pai {
+    border: black solid 1px;
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-pai div {
+    background-color: aquamarine;
+    border: blueviolet solid 1px;
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+}
