@@ -1,0 +1,36 @@
+a :link,
+a :visited {
+    font-weight: bold;
+    color: black;
+}
+a :hover {
+    color: rgb(3, 131, 190);
+    font-size: 2rem;
+}
+
+input:focus {
+    border: dashed rgba(38, 228, 0, 0.774) 5px; 
+    border-color: red;
+    background-color: rgb(175, 173, 72);
+}
+
+input:target {
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    width:  200px;
+    height: 50px;
+    margin: 50px;
+    padding: 5px;
+    background-color: rgb(0, 77, 177);
+    transition:
+         background-color 0.15s,
+         color 0.5s;
+}
+button:hover {
+    background-color: rgb(3, 165, 240);
+    color: beige
+}

@@ -1,0 +1,32 @@
+#menu {
+    display: inline;
+    padding: 50px;
+    font-size: 18px;
+    background-color: aquamarine;
+}
+
+#titulo {
+    font-size: 28px;
+    color: blue;
+}
+
+.sub-titulo {
+        font-size: 20px;
+        color: blue;
+}
+
+.cartao {
+    background-color: rgb(5, 173, 159);
+    width: 25%;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+.cartao-maior {
+    margin-top: 100px;
+    width: 50%;
+    background-color: rgb(255, 0, 43);
+    height: 150px;
+}

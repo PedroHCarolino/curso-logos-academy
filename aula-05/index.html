@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text.css" href="./styles.css" />
+    <title> Formulários Avançado </title>
+</head>
+<body>
+      <form method="get" action="#">
+
+          <div>
+              <label> Fale sobre você: </label>
+              <textarea cols = "10" name = "sobreVoce" rows = "5">
+              </textarea>
+          </div>
+          <div>
+              <label>Estado:</label>
+              <select name="estado">
+                  <option value="selecione">Selecione</option>
+                  <option value="rio">Rio de Janeiro</option>
+                  <option value="paraiba">Paraiba</option>
+                  <option value="sao">São Paulo</option>
+              </select>
+          </div>
+          <div>
+              <h4>Escolha seus pratos favoritos</h4>
+              <label>Lasanha</label>
+              <input type="checkbox" value="lasanha"/>
+              <label>Feijoada</label>
+              <input type="checkbox" value="feijoada"/>
+          </div>
+          <div>
+                <h4>Escolha seu Genêro</h4>
+                <label>Masculino</label>
+                <input type="radio" name="genero" value="masculino">
+          </div>
+          <div>
+              <label>Feminino</label>
+              <input type="radio" name="genero" value="feminino">
+            </div>
+          <button type="submit">Enviar</button>
+      </form>
+</body>
+</html>

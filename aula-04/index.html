@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com formularios</title>
+</head>
+<body>
+    <form action="/Cadastro" method="post">
+        <div>
+            <label for ="nome">Nome Completo</label>
+            <input 
+            id = "nome" 
+            type = "text"
+            placeholder = "informe seu Nome Completo"
+            required />
+        </div>
+        <div>
+            <label for = "email">Email</label>
+            <input 
+            name = "email"
+            id = "email"
+            type = "email" 
+            placeholder = "informe seu email"
+            required />
+        </div>
+        <div>
+            <label for = "telefone">Telefone</label>
+            <input 
+            id = "telefone" 
+            type = "tel" 
+            placeholder = "informe seu telefone"/>
+        </div>
+        <div>
+            <label for = "senha">Senha</label>
+            <input 
+            name = "senha"
+            id = "senha" 
+            type = "password" 
+            placeholder = "informe sua senha"
+            required />
+        </div>
+        <div>
+            <label for = "dataNascimento">Data de Nascimento</label>
+            <input 
+            id = "dataNascimento" 
+            type = "date" />
+        </div>
+        <input  type="submit" value="Saiba Mais" />
+</body>
+</html>
