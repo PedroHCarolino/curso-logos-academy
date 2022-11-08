@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model admins {
+  id            Int        @id @default(autoincrement())
+  endereco_id   Int
+  doc_id        Int
+  nome_completo String     @db.VarChar(255)
+  email         String?    @unique(map: "email") @db.VarChar(255)
+  password      String?    @db.VarChar(32)
+  phone         String?    @db.VarChar(255)
+  cep           String?    @db.VarChar(255)
+  enderecos     enderecos  @relation(fields: [endereco_id], references: [id], onUpdate: Restrict, map: "admins_ibfk_1")
+  documentos    documentos @relation(fields: [doc_id], references: [id], onUpdate: Restrict, map: "admins_ibfk_2")
+
+  @@index([doc_id], map: "doc_id")
+  @@index([endereco_id], map: "endereco_id")
+}
+
+model avaliacoes {
+  id             Int       @id @default(autoincrement())
+  avaliacao_id   Int
+  comentarios    String?   @db.VarChar(255)
+  nota           String?   @db.VarChar(255)
+  data_avaliacao DateTime? @db.Date
+}
+
+model clientes {
+  id            Int        @id @default(autoincrement())
+  endereco_id   Int
+  doc_id        Int
+  nome_completo String     @db.VarChar(255)
+  email         String?    @unique(map: "email") @db.VarChar(255)
+  password      String?    @db.VarChar(32)
+  phone         String?    @db.VarChar(255)
+  cep           String?    @db.VarChar(255)
+  enderecos     enderecos  @relation(fields: [endereco_id], references: [id], onUpdate: Restrict, map: "clientes_ibfk_1")
+  documentos    documentos @relation(fields: [doc_id], references: [id], onUpdate: Restrict, map: "clientes_ibfk_2")
+
+  @@index([doc_id], map: "doc_id")
+  @@index([endereco_id], map: "endereco_id")
+}
+
+model documentos {
+  id               Int           @id @default(autoincrement())
+  doc_id           Int
+  tipo_documento   String        @db.VarChar(255)
+  numero_documento String        @db.VarChar(255)
+  admins           admins[]
+  clientes         clientes[]
+  prestadores      prestadores[]
+}
+
+model enderecos {
+  id          Int           @id @default(autoincrement())
+  endereco_id Int
+  rua         String?       @db.VarChar(255)
+  numero      String?       @db.VarChar(255)
+  cep         String?       @db.VarChar(255)
+  complemento String?       @db.VarChar(255)
+  admins      admins[]
+  clientes    clientes[]
+  prestadores prestadores[]
+}
+
+model prestadores {
+  id                 Int        @id @default(autoincrement())
+  endereco_id        Int
+  doc_id             Int
+  nome_completo      String     @db.VarChar(255)
+  email              String?    @unique(map: "email") @db.VarChar(255)
+  servico_primario   String?    @db.VarChar(255)
+  servico_secundario String?    @db.VarChar(255)
+  password           String?    @db.VarChar(32)
+  phone              String?    @db.VarChar(255)
+  cep                String?    @db.VarChar(255)
+  avaliacao_id       String?    @db.VarChar(255)
+  enderecos          enderecos  @relation(fields: [endereco_id], references: [id], onUpdate: Restrict, map: "prestadores_ibfk_1")
+  documentos         documentos @relation(fields: [doc_id], references: [id], onUpdate: Restrict, map: "prestadores_ibfk_2")
+
+  @@index([doc_id], map: "doc_id")
+  @@index([endereco_id], map: "endereco_id")
+}
